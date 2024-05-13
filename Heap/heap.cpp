@@ -59,7 +59,7 @@ public:
             int leftIdx = (2 * idx) + 1;
             int rightIdx = (2 * idx) + 2;
 
-            if (idx <= size and arr[idx] < arr[leftIdx])
+            if (leftIdx <= size and arr[idx] < arr[leftIdx])
             {
                 if (arr[leftIdx] > arr[rightIdx])
                 {
@@ -72,7 +72,7 @@ public:
                     idx = rightIdx;
                 }
             }
-            else if (idx <= size and arr[idx] < arr[rightIdx])
+            else if (rightIdx <= size and arr[idx] < arr[rightIdx])
             {
                 swap(arr[idx], arr[rightIdx]);
                 idx = rightIdx;
